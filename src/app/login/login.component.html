@@ -1,0 +1,15 @@
+<form align="center" [formGroup]="fmData" (ngSubmit)="sub(fmData)">
+    <label class="text-light" for="user">Enter Email or Password</label>
+    <input type="text" id="user" formControlName="user" class="text-light" placeholder="Enter Email or phone number" (ngModelChange)="mychange1($event)" (input)="mychange(fmData)"  ngModel>
+    <br>
+    <p *ngIf="isVali">
+        <span *ngIf="erruser.errors?.required">Enter User Name</span>
+
+    </p>
+    <br>
+    <label for="password">Enter Password</label>
+    <input type="password" id="password" formControlName="password" placeholder="Enter password" (click)="isVali=true" ngModel>
+    <br>
+    <input type="submit" id="sub"value="Login">
+</form>
+{{loginData|json}}

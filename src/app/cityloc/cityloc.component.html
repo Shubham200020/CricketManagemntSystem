@@ -1,0 +1,25 @@
+
+<form (ngSubmit)="sub(fmData1)" [formGroup]="fmData1">
+    <select formControlName="state">
+        <option selected>select City</option>
+        <option *ngFor="let i of dataList" [ngValue]="i">{{i.statename}}</option>
+       </select><br>
+</form>
+
+<form (ngSubmit)="sub(fmData)" [formGroup]="fmData">
+  
+    <input type="text" formControlName="cityid" placeholder="Enter City Id"><br>
+    <span *ngIf="getErrCtId.errors?.pattern">Enter Only Numbers</span>
+    <div *ngFor="let i Of cty">
+        <span *ngIf="i.cityid==fmData.value.cityid">Id Already Exist</span>
+    </div>
+    <br>
+    <input type="text" formControlName="cotyname" placeholder="Enter City name"><br>
+    <input type="submit" value="Insert">
+
+</form>
+{{stateId}}
+
+
+
+

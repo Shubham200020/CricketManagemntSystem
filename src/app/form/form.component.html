@@ -1,0 +1,151 @@
+<div class="cont">
+
+<form [formGroup]="fmdata" (ngSubmit)="sub(fmdata)" class="shellfm">
+    <h1>Form</h1>
+<input type="hidden" formControlName="playerid">
+    <!-- Enter Name -->
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Full Name" formControlName="name" required >
+        <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+        <p Class="war" *ngIf="errName.errors?.required">Name Requires*</p>
+        </small>
+    </div>
+
+
+    <!-- Enter Email -->
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email" required >
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <br>
+        <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+            <p Class="war" *ngIf="errEmail.errors?.required">Email Requires*</p>
+            </small>
+        <small id="emailHelp" class="form-text text-muted " ><p class="war" *ngIf="errEmail.errors?.email">Enter Valid Email</p></small>
+    </div>
+
+
+   <!-- Enter Phone Number -->
+    <div class="form-group">
+        <label for="exampleInputPassword1">Phone Number</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Phone Number" formControlName="phonenumber" required >
+        <small id="emailHelp" class="form-text text-muted " ><p class="text-danger"><b></b></p></small>
+        <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+            <p Class="war" *ngIf="errPone.errors?.required">Phone Requires*</p>
+        </small>
+        <small id="emailHelp" class="form-text text-muted ">
+            <p Class="war" *ngIf="errPone.errors?.pattern || errPone.errors?.minlength || errPone.errors?.maxlength">Enter Valid Number</p>
+        </small>
+    </div>
+
+  
+   <!-- Enter Password -->
+   <form [formGroup]="ids">
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="Password" placeholder="Enter Password" required >
+    </div>
+    <small id="emailHelp" class="form-text text-muted">Minimum Password Length should be 8 maximum length 16 Enter Strong password </small>
+    <small>
+        <p class="war" *ngIf="errConpass.errors?.minlength ">Minimum length 8</p>
+        <p class="war" *ngIf="errConpass.errors?.maxlength ">Minimum length 8</p>
+    </small>
+    <br>
+    <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+        <p Class="war" *ngIf="errConpass.errors?.required">Password Requires*</p>
+    </small>
+    </form>
+
+
+    <!-- Conform Password -->
+    <div class="form-group">
+        <label for="exampleInputPassword1"><b>Conform Password</b></label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Conform Password"  formControlName="password" required >
+        <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+            <p Class="war" *ngIf="errPassword.errors?.required">Password Requires*</p>
+        </small>
+        <small id="emailHelp" class="form-text text-muted " ><p class="text-danger"><b></b></p></small>
+    </div>
+
+
+    <!-- State -->
+    <form [formGroup]="ids">
+    <div class="form-group"><b>State</b></div>
+    <select name="state"  class="form-select" formControlName="stateid" (change)="changeState()">
+        <option selected>select State</option>
+        <option *ngFor="let i of State" [ngValue]="i.stateid">{{i.statename|uppercase}}</option>
+    </select>
+    <small id="emailHelp" class="form-text text-muted " *ngIf="req || req1">
+        <p Class="war" *ngIf="errStateid.errors?.required ">State Requires Before City*</p>
+    </small>
+  
+    </form>
+  
+
+
+    <!-- City   -->
+
+    <div class="form-group"><b>CITY</b></div>
+    <select class="form-select" aria-label="Default select example" formControlName="address" (click)="clickAct()"  required >
+    <option selected>Select City</option>
+    <option *ngFor="let i of City" [ngValue]="i" >{{i.cotyname|uppercase}}</option>
+    </select>
+    <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+        <p Class="war" *ngIf="errAddress.errors?.required ">State Requires Before City*</p>
+    </small>
+
+    <!-- Date Of Birth -->
+    <div class="form-group">
+        <label for="birthday">DATE Of Birth:</label>
+        <input type="date" id="birthday" class="form-control" formControlName="dob" required >
+        <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+            <p Class="war" *ngIf="errDob.errors?.required ">State Requires Before City*</p>
+        </small>
+    </div>
+
+
+    <!-- Gender -->
+    <div class="form-group"><b>Gender</b></div>
+    <div class="form-check">
+        <label class="form-check-label" for="ml">Male</label>
+        <input type="radio"  class="form-check-input" id="ml" value="Male" formControlName="gen" >        
+    </div>
+
+
+    <div class="form-check">
+        <label class="form-check-label" for="fl">FEMALE</label>
+        <input type="radio" class="form-check-input" id="fl" value="FEMALE" formControlName="gen" >
+    </div>
+
+
+    <div class="form-check">
+        <label class="form-check-label" for="ot">Other</label>
+        <input type="radio" class="form-check-input" id="ot" value="Other" formControlName="gen" >
+    </div>  
+    <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+        <p Class="war" *ngIf="errGen.errors?.required ">State Requires Before City*</p>
+    </small>
+    
+    <!-- Side -->
+    <div class="form-group"><b>Side</b></div>
+
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="left" value="LEFT" formControlName="sd" >
+        <label class="form-check-label" for="left">LEFT</label>
+    </div>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="right" value="RIGHT" formControlName="sd" >
+        <label class="form-check-label" for="right">RIGHT</label>
+    </div>
+    <small id="emailHelp" class="form-text text-muted " *ngIf="req">
+        <p Class="war" *ngIf="errSd.errors?.required ">State Requires Before City*</p>
+    </small>
+
+
+    <div id="btn">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    
+</form>
+</div>

@@ -1,0 +1,103 @@
+*{
+    background-color: #804040;
+	background-attachment:fixed;
+	color: white;
+	scroll-behavior: smooth;
+}
+input{
+
+	border: 4px solid black;
+}
+label {
+		text-shadow: 2px 2px red;
+	width: 40%;
+	font-size: 20px;
+	
+}
+label {
+	margin-bottom: 30px;
+}
+
+#user{
+	width: 40%;
+	font-size: 20px;
+	opacity: 0.9;
+}
+input[type="submit"]{
+	box-shadow: 15px 15px black;
+}
+input[type="submit"]:hover{
+	
+	box-shadow: 5px 5px black;
+}
+#password{
+	width: 40%;
+	font-size: 20px;
+}
+
+#sub{
+	border-radius: 42%;
+	text-align: center;
+	border-radius: 4px;
+	background-color: #bc4600;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 10px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+#sub:hover{
+	transform: scale(0.9);
+	background-attachment: fixed;
+}
+input label{
+	margin: 220px;
+	opacity: 0.7;
+}
+
+form{
+	text-align:center;
+	padding:20px;
+	align-items: center;
+	width:100%;
+	opacity: 1.8;
+	height: 800px;
+	height: 320px;
+	
+}
+#sub:active {
+	transform: scale(0.9);
+}
+.cssNav{
+	height:22px;
+	position: -webkit-sticky;
+  	position: sticky;
+	top:0;
+	width:100%;
+	font-size:20px;
+	background-color: white;
+	
+}
+.warning{
+	font-size: large;
+	color: red;
+}
+
+nav{
+	text-shadow: 2px 2px red;
+	position:fixed;
+}
+.conNav{
+	color:white;
+	position: -webkit-sticky;
+    position: sticky;
+    top:0;
+}
+span{
+    color: red;
+    font-size: 40px;
+}
+

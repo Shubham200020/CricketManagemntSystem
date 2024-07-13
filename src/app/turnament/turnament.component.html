@@ -1,0 +1,81 @@
+<section id="turnament">
+<div class="shell row" >
+    
+    <div class="col-6 sl1" *ngFor="let i of turnament" >
+        <h1>{{i.turnamentName|uppercase}}</h1>
+        <button (click)="insertPlays(i)">EDIT</button>
+       
+       
+        <table class="table table-striped table-sm thbl">
+            <tr>
+                <th >{{i.team1Name}}</th>
+                <th >{{i.team2Name}}</th>
+
+            </tr>
+            <tr *ngIf="id==i.turnamentid">
+
+                <td>
+                <tr *ngFor="let i of player1">
+                    <td> {{i.name}}</td>
+                   
+                </tr>
+            </td>
+            <td>
+                <tr *ngFor="let i of player2">
+                    <td>{{i.name}}</td>
+                </tr>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <select [(ngModel)]="playerData1">
+                        <option *ngFor="let i of player" [ngValue]="i">{{i.name}}</option>
+                    </select>
+                </td>
+               
+                <td>
+                    <select [(ngModel)]="playerData2">
+                        <option *ngFor="let i of player" [ngValue]="i">{{i.name}}</option>
+                    </select>
+                </td>
+                
+            </tr>
+           <tr>
+            <td>
+                <button (click)="insertPlayers(i,playerData1,'1')">Insert</button>
+            </td>
+            <td><button (click)="insertPlayers(i,playerData2,'2')">Insert</button></td>
+           </tr>
+        </table>
+       
+    </div>
+ 
+</div>
+
+</section>
+<div class="insertData" *ngIf="indic">
+    
+    <table class="table table-striped table-sm thbl">
+        <tr >
+            <th>{{data.team1Name}}</th>
+            <th>{{data.team2Name}}</th>
+
+        </tr>
+        <tr>
+           
+            <td>
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <button>Insert</button>
+            </td>
+            <td>
+                <button>Insert </button>
+            </td>
+        </tr>
+    </table>
+
+</div>

@@ -1,0 +1,107 @@
+table{
+    width: 100%;
+
+}
+.txt{
+    font-size: 15px;
+}
+.tabcl{
+    margin-left: 2px;
+    margin-bottom: 60px;
+    font-size: larger;
+    background-color: rgb(44, 47, 47);
+    color: aliceblue;
+}
+
+thead{
+    margin-bottom:20px ;
+    box-shadow: 10px 10px black;
+}
+.dta th{
+    background-color: rgb(135, 134, 134);
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+.dta td{
+    font-size: 22px;
+    border: 1px solid black;
+    text-align: center;
+    color: rgb(132, 132, 133);
+ 
+   
+}
+
+.dta tr:hover{
+    color: rgb(208, 208, 215);
+    background-color: rgb(45, 45, 46);
+    box-shadow: 1px 1px 1px 3px black;
+}
+
+.btn{
+    width: 100%;
+    height: 100%;
+}
+.dta td:hover{
+    background-color: rgb(78, 79, 81);
+    color: white;
+}
+.dta tr{
+    
+    height: 9px;
+}
+div form{
+
+    padding: 0;
+    margin: 0%;
+  height: 100%;
+  
+}
+.sids {
+    background-color: rgb(61, 56, 56);
+    color: #f1f1f1;
+    height: 100%;
+
+}
+.sids :hover a:hover{
+  
+    color: #0d0c0c;
+} 
+a{
+    font-size: 15px;
+    color: #f1f1f1;
+}
+div form input{
+    
+    font-size: larger;
+}
+div form label{
+    
+    font-size: larger;
+}
+main{
+    box-shadow: -5px 5px black;
+}
+select{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(14, 14, 15);
+    color: white;
+  
+}
+button{
+    width: 100%;
+    height: 90%;
+    border: 2px solid rgb(6, 65, 6);
+    background-color: rgb(6, 65, 6);
+    color: aliceblue;
+  
+}
+
+button:hover{
+    transform: scale(0.97);
+    color: aliceblue;
+
+    box-shadow: 10px 10px black;
+}
+

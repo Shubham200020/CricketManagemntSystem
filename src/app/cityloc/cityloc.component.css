@@ -1,0 +1,36 @@
+*{
+	background-color: rgb(32, 28, 28);
+}
+select{
+	text-align: center;
+	background-color: black;
+	color: aliceblue;
+}
+span{
+	color: red;
+	font-size: 20px;
+}
+option{
+	background-color: black;
+	color: aliceblue;
+}
+form{
+	text-align: center;
+	
+}
+input[type=text]{
+	width: 20%;
+	height: 30px;
+	background-color: black;
+	color: aliceblue;
+}
+input[type=submit]{
+	width: 20%;
+	height: 30px;
+	background-color: black;
+	color: aliceblue;
+}
+select{
+	width: 20%;
+	height: 30px;
+}

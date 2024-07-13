@@ -1,0 +1,56 @@
+#book-btn{
+    position: relative;
+    /* background-color: red; */
+    border: 2px solid rgb(240, 57, 57);
+    top:330px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    height: 70px;
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+footer{
+    border: 1px solid black;
+}
+#book-btn:active{
+    transform: scale(0.8);
+}
+#book-btn h2{
+    z-index: 1;
+}
+.col{
+	color:gray;
+	height:100%;
+	display: block;
+    justify-content: center;
+}
+.ani{
+    position: absolute;
+    background-color: rgb(240, 57, 57);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all .7s ease-in-out;
+    transform: translate(0px,200px);
+}
+
+#book-btn:hover .ani{
+    /* transition: all .3s; */
+    transform: translate(0,0);
+}
+.txt:hover{
+	
+	 transform: scale(0.8);
+}
+ul{
+	background-color: white;
+}
+li{
+	margin:20px;
+	background-color: white;
+}
