@@ -1,3 +1,3 @@
 ﻿# CricketManagemntSystem
 # Angular for FrontEnd
-# Backend Spring Boot , MYSQL
+# Backend Spring Boot , MYSQL ,JPA 
